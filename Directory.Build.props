@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net11.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Exhaustiveness is a build error, not a suggestion. -->
+    <!-- CS8509: non-exhaustive switch. CS8524: unnamed enum value not handled. CS8655: null not handled. -->
+    <WarningsAsErrors>$(WarningsAsErrors);CS8509;CS8524;CS8655</WarningsAsErrors>
+  </PropertyGroup>
+</Project>

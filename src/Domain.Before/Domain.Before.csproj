@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- The "before" samples compile as C# 14, so no C# 15 feature can leak in. -->
+    <LangVersion>14</LangVersion>
+  </PropertyGroup>
+
+</Project>

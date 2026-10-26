@@ -1,0 +1,2633 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 49 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore gen.csproj /p:ArtifactsPath=/Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/a /p:BenchmarkDotNetGatherReferences=true --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1
+// command took 1.17 sec and exited with 0
+// start dotnet build gen.csproj -f net11.0 -c Release /p:ArtifactsPath=/Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/a /p:BenchmarkDotNetGatherReferences=true --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1
+// command took 4.38 sec and exited with 0
+// start dotnet build gen.csproj -f net11.0 -c Release /p:ArtifactsPath=/Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/a --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1
+// command took 2.89 sec and exited with 0
+// ***** Done, took 00:00:08 (8.49 sec)   *****
+// Found 9 benchmarks:
+//   CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+
+// **************************
+// Benchmark: CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59510 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.EarlyReturn(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 0 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1559000.00 ns, 1.5590 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 269500.00 ns, 269.5000 ns/op
+WorkloadResult   1: 1000 op, 1559000.00 ns, 1.5590 us/op
+// GC:  0 0 0 144000 1000
+
+// AfterAll
+// Benchmark Process 27448 has exited with code 0.
+
+Mean = 1.559 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.559 μs, Q1 = 1.559 μs, Median = 1.559 μs, Q3 = 1.559 μs, Max = 1.559 μs
+IQR = 0.000 μs, LowerFence = 1.559 μs, UpperFence = 1.559 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 48 (98.0%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59512 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.Bind(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 1 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 2230833.00 ns, 2.2308 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 491625.00 ns, 491.6250 ns/op
+WorkloadResult   1: 1000 op, 2230833.00 ns, 2.2308 us/op
+// GC:  0 0 0 496000 1000
+
+// AfterAll
+// Benchmark Process 27449 has exited with code 0.
+
+Mean = 2.231 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.231 μs, Q1 = 2.231 μs, Median = 2.231 μs, Q3 = 2.231 μs, Max = 2.231 μs
+IQR = 0.000 μs, LowerFence = 2.231 μs, UpperFence = 2.231 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 47 (95.9%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59514 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.Linq(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 2 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 2385167.00 ns, 2.3852 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 715750.00 ns, 715.7500 ns/op
+WorkloadResult   1: 1000 op, 2385167.00 ns, 2.3852 us/op
+// GC:  0 0 0 432000 1000
+
+// AfterAll
+// Benchmark Process 27450 has exited with code 0.
+
+Mean = 2.385 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.385 μs, Q1 = 2.385 μs, Median = 2.385 μs, Q3 = 2.385 μs, Max = 2.385 μs
+IQR = 0.000 μs, LowerFence = 2.385 μs, UpperFence = 2.385 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 46 (93.9%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59516 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.EarlyReturn(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 3 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1647500.00 ns, 1.6475 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 213459.00 ns, 213.4590 ns/op
+WorkloadResult   1: 1000 op, 1647500.00 ns, 1.6475 us/op
+// GC:  0 0 0 139440 1000
+
+// AfterAll
+// Benchmark Process 27451 has exited with code 0.
+
+Mean = 1.647 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.647 μs, Q1 = 1.647 μs, Median = 1.647 μs, Q3 = 1.647 μs, Max = 1.647 μs
+IQR = 0.000 μs, LowerFence = 1.647 μs, UpperFence = 1.647 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 45 (91.8%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59519 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.Bind(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 4 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 2758042.00 ns, 2.7580 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 529416.00 ns, 529.4160 ns/op
+WorkloadResult   1: 1000 op, 2758042.00 ns, 2.7580 us/op
+// GC:  0 0 0 479328 1000
+
+// AfterAll
+// Benchmark Process 27463 has exited with code 0.
+
+Mean = 2.758 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.758 μs, Q1 = 2.758 μs, Median = 2.758 μs, Q3 = 2.758 μs, Max = 2.758 μs
+IQR = 0.000 μs, LowerFence = 2.758 μs, UpperFence = 2.758 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 44 (89.8%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59521 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.Linq(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 5 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 2694458.00 ns, 2.6945 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 496084.00 ns, 496.0840 ns/op
+WorkloadResult   1: 1000 op, 2694458.00 ns, 2.6945 us/op
+// GC:  0 0 0 422072 1000
+
+// AfterAll
+// Benchmark Process 27464 has exited with code 0.
+
+Mean = 2.694 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.694 μs, Q1 = 2.694 μs, Median = 2.694 μs, Q3 = 2.694 μs, Max = 2.694 μs
+IQR = 0.000 μs, LowerFence = 2.694 μs, UpperFence = 2.694 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 43 (87.8%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59523 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.EarlyReturn(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 6 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1680500.00 ns, 1.6805 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 310458.00 ns, 310.4580 ns/op
+WorkloadResult   1: 1000 op, 1680500.00 ns, 1.6805 us/op
+// GC:  0 0 0 121304 1000
+
+// AfterAll
+// Benchmark Process 27465 has exited with code 0.
+
+Mean = 1.681 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.681 μs, Q1 = 1.681 μs, Median = 1.681 μs, Q3 = 1.681 μs, Max = 1.681 μs
+IQR = 0.000 μs, LowerFence = 1.681 μs, UpperFence = 1.681 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 42 (85.7%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59525 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.Bind(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 7 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 2372834.00 ns, 2.3728 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 409625.00 ns, 409.6250 ns/op
+WorkloadResult   1: 1000 op, 2372834.00 ns, 2.3728 us/op
+// GC:  0 0 0 413192 1000
+
+// AfterAll
+// Benchmark Process 27466 has exited with code 0.
+
+Mean = 2.373 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.373 μs, Q1 = 2.373 μs, Median = 2.373 μs, Q3 = 2.373 μs, Max = 2.373 μs
+IQR = 0.000 μs, LowerFence = 2.373 μs, UpperFence = 2.373 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 41 (83.7%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59527 --benchmarkName "Benchmarks.Composition.CompositionBenchmarks.Linq(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 8 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 2541125.00 ns, 2.5411 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 443000.00 ns, 443.0000 ns/op
+WorkloadResult   1: 1000 op, 2541125.00 ns, 2.5411 us/op
+// GC:  0 0 0 382592 1000
+
+// AfterAll
+// Benchmark Process 27467 has exited with code 0.
+
+Mean = 2.541 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.541 μs, Q1 = 2.541 μs, Median = 2.541 μs, Q3 = 2.541 μs, Max = 2.541 μs
+IQR = 0.000 μs, LowerFence = 2.541 μs, UpperFence = 2.541 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 40 (81.6%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Composition.CompositionBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Composition.CompositionBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Composition.CompositionBenchmarks-report.html
+
+// * Detailed results *
+CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.559 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.559 μs, Q1 = 1.559 μs, Median = 1.559 μs, Q3 = 1.559 μs, Max = 1.559 μs
+IQR = 0.000 μs, LowerFence = 1.559 μs, UpperFence = 1.559 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.558 μs ; 1.560 μs) | @
+---------------------------------------------------
+
+CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 2.231 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.231 μs, Q1 = 2.231 μs, Median = 2.231 μs, Q3 = 2.231 μs, Max = 2.231 μs
+IQR = 0.000 μs, LowerFence = 2.231 μs, UpperFence = 2.231 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.230 μs ; 2.231 μs) | @
+---------------------------------------------------
+
+CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 2.385 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.385 μs, Q1 = 2.385 μs, Median = 2.385 μs, Q3 = 2.385 μs, Max = 2.385 μs
+IQR = 0.000 μs, LowerFence = 2.385 μs, UpperFence = 2.385 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.385 μs ; 2.386 μs) | @
+---------------------------------------------------
+
+CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.647 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.647 μs, Q1 = 1.647 μs, Median = 1.647 μs, Q3 = 1.647 μs, Max = 1.647 μs
+IQR = 0.000 μs, LowerFence = 1.647 μs, UpperFence = 1.647 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.647 μs ; 1.648 μs) | @
+---------------------------------------------------
+
+CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 2.758 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.758 μs, Q1 = 2.758 μs, Median = 2.758 μs, Q3 = 2.758 μs, Max = 2.758 μs
+IQR = 0.000 μs, LowerFence = 2.758 μs, UpperFence = 2.758 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.758 μs ; 2.759 μs) | @
+---------------------------------------------------
+
+CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 2.694 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.694 μs, Q1 = 2.694 μs, Median = 2.694 μs, Q3 = 2.694 μs, Max = 2.694 μs
+IQR = 0.000 μs, LowerFence = 2.694 μs, UpperFence = 2.694 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.694 μs ; 2.695 μs) | @
+---------------------------------------------------
+
+CompositionBenchmarks.EarlyReturn: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.681 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.681 μs, Q1 = 1.681 μs, Median = 1.681 μs, Q3 = 1.681 μs, Max = 1.681 μs
+IQR = 0.000 μs, LowerFence = 1.681 μs, UpperFence = 1.681 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.680 μs ; 1.681 μs) | @
+---------------------------------------------------
+
+CompositionBenchmarks.Bind: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 2.373 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.373 μs, Q1 = 2.373 μs, Median = 2.373 μs, Q3 = 2.373 μs, Max = 2.373 μs
+IQR = 0.000 μs, LowerFence = 2.373 μs, UpperFence = 2.373 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.372 μs ; 2.373 μs) | @
+---------------------------------------------------
+
+CompositionBenchmarks.Linq: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 2.541 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 2.541 μs, Q1 = 2.541 μs, Median = 2.541 μs, Q3 = 2.541 μs, Max = 2.541 μs
+IQR = 0.000 μs, LowerFence = 2.541 μs, UpperFence = 2.541 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.541 μs ; 2.542 μs) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.16.0-preview.2, macOS Tahoe 26.7 (25G229) [Darwin 25.6.0]
+Apple M2 Pro, 1 CPU, 12 logical and 12 physical cores
+Memory: 32 GB Total, 0.77 GB Available
+.NET SDK 11.0.100-rc.1.26425.128
+  [Host] : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+  Dry    : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+
+Job=Dry  IterationCount=1  LaunchCount=1  
+RunStrategy=ColdStart  UnrollFactor=1  
+
+| Method      | FailurePercent | Mean     | Error | Ratio | Allocated | Alloc Ratio |
+|------------ |--------------- |---------:|------:|------:|----------:|------------:|
+| EarlyReturn | 0              | 1.559 μs |    NA |  1.00 |     144 B |        1.00 |
+| Bind        | 0              | 2.231 μs |    NA |  1.43 |     496 B |        3.44 |
+| Linq        | 0              | 2.385 μs |    NA |  1.53 |     432 B |        3.00 |
+|             |                |          |       |       |           |             |
+| EarlyReturn | 10             | 1.647 μs |    NA |  1.00 |     139 B |        1.00 |
+| Bind        | 10             | 2.758 μs |    NA |  1.67 |     479 B |        3.45 |
+| Linq        | 10             | 2.694 μs |    NA |  1.64 |     422 B |        3.04 |
+|             |                |          |       |       |           |             |
+| EarlyReturn | 50             | 1.681 μs |    NA |  1.00 |     121 B |        1.00 |
+| Bind        | 50             | 2.373 μs |    NA |  1.41 |     413 B |        3.41 |
+| Linq        | 50             | 2.541 μs |    NA |  1.51 |     383 B |        3.17 |
+
+// * Warnings *
+MinIterationTime
+  CompositionBenchmarks.EarlyReturn: Dry -> The minimum observed iteration time is 1.559ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  CompositionBenchmarks.Bind: Dry        -> The minimum observed iteration time is 2.231ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  CompositionBenchmarks.Linq: Dry        -> The minimum observed iteration time is 2.385ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  CompositionBenchmarks.EarlyReturn: Dry -> The minimum observed iteration time is 1.648ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  CompositionBenchmarks.Bind: Dry        -> The minimum observed iteration time is 2.758ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  CompositionBenchmarks.Linq: Dry        -> The minimum observed iteration time is 2.694ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  CompositionBenchmarks.EarlyReturn: Dry -> The minimum observed iteration time is 1.681ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  CompositionBenchmarks.Bind: Dry        -> The minimum observed iteration time is 2.373ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  CompositionBenchmarks.Linq: Dry        -> The minimum observed iteration time is 2.541ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Legends *
+  FailurePercent : Value of the 'FailurePercent' parameter
+  Mean           : Arithmetic mean of all measurements
+  Error          : Half of 99.9% confidence interval
+  Ratio          : Mean of the ratio distribution ([Current]/[Baseline])
+  Allocated      : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio    : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 μs           : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:03 (3.35 sec), executed benchmarks: 9
+
+// Found 6 benchmarks:
+//   JsonBenchmarks.DeserializeDto: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   JsonBenchmarks.DeserializeUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   JsonBenchmarks.DeserializeClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   JsonBenchmarks.SerializeDto: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   JsonBenchmarks.SerializeUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   JsonBenchmarks.SerializeClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// **************************
+// Benchmark: JsonBenchmarks.DeserializeDto: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59529 --benchmarkName Benchmarks.Json.JsonBenchmarks.DeserializeDto --job Dry --diagnoserRunMode 3 --benchmarkId 9 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1740500.00 ns, 1.7405 ms/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1 op, 58458.00 ns, 58.4580 us/op
+WorkloadResult   1: 1 op, 1740500.00 ns, 1.7405 ms/op
+// GC:  0 0 0 208 1
+
+// AfterAll
+// Benchmark Process 27487 has exited with code 0.
+
+Mean = 1.740 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 1.740 ms, Q1 = 1.740 ms, Median = 1.740 ms, Q3 = 1.740 ms, Max = 1.740 ms
+IQR = 0.000 ms, LowerFence = 1.740 ms, UpperFence = 1.740 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 39 (79.6%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: JsonBenchmarks.DeserializeUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59531 --benchmarkName Benchmarks.Json.JsonBenchmarks.DeserializeUnion --job Dry --diagnoserRunMode 3 --benchmarkId 10 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 2754417.00 ns, 2.7544 ms/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1 op, 46500.00 ns, 46.5000 us/op
+WorkloadResult   1: 1 op, 2754417.00 ns, 2.7544 ms/op
+// GC:  0 0 0 1392 1
+
+// AfterAll
+// Benchmark Process 27499 has exited with code 0.
+
+Mean = 2.754 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 2.754 ms, Q1 = 2.754 ms, Median = 2.754 ms, Q3 = 2.754 ms, Max = 2.754 ms
+IQR = 0.000 ms, LowerFence = 2.754 ms, UpperFence = 2.754 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 38 (77.6%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: JsonBenchmarks.DeserializeClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59534 --benchmarkName Benchmarks.Json.JsonBenchmarks.DeserializeClosed --job Dry --diagnoserRunMode 3 --benchmarkId 11 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1482500.00 ns, 1.4825 ms/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1 op, 57709.00 ns, 57.7090 us/op
+WorkloadResult   1: 1 op, 1482500.00 ns, 1.4825 ms/op
+// GC:  0 0 0 544 1
+
+// AfterAll
+// Benchmark Process 27500 has exited with code 0.
+
+Mean = 1.482 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 1.482 ms, Q1 = 1.482 ms, Median = 1.482 ms, Q3 = 1.482 ms, Max = 1.482 ms
+IQR = 0.000 ms, LowerFence = 1.482 ms, UpperFence = 1.482 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 37 (75.5%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: JsonBenchmarks.SerializeDto: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59536 --benchmarkName Benchmarks.Json.JsonBenchmarks.SerializeDto --job Dry --diagnoserRunMode 3 --benchmarkId 12 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 63209.00 ns, 63.2090 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1 op, 26083.00 ns, 26.0830 us/op
+WorkloadResult   1: 1 op, 63209.00 ns, 63.2090 us/op
+// GC:  0 0 0 136 1
+
+// AfterAll
+// Benchmark Process 27501 has exited with code 0.
+
+Mean = 63.209 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 63.209 μs, Q1 = 63.209 μs, Median = 63.209 μs, Q3 = 63.209 μs, Max = 63.209 μs
+IQR = 0.000 μs, LowerFence = 63.209 μs, UpperFence = 63.209 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 36 (73.5%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: JsonBenchmarks.SerializeUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59538 --benchmarkName Benchmarks.Json.JsonBenchmarks.SerializeUnion --job Dry --diagnoserRunMode 3 --benchmarkId 13 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 68750.00 ns, 68.7500 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1 op, 33792.00 ns, 33.7920 us/op
+WorkloadResult   1: 1 op, 68750.00 ns, 68.7500 us/op
+// GC:  0 0 0 760 1
+
+// AfterAll
+// Benchmark Process 27502 has exited with code 0.
+
+Mean = 68.750 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 68.750 μs, Q1 = 68.750 μs, Median = 68.750 μs, Q3 = 68.750 μs, Max = 68.750 μs
+IQR = 0.000 μs, LowerFence = 68.750 μs, UpperFence = 68.750 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 35 (71.4%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: JsonBenchmarks.SerializeClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59540 --benchmarkName Benchmarks.Json.JsonBenchmarks.SerializeClosed --job Dry --diagnoserRunMode 3 --benchmarkId 14 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 78584.00 ns, 78.5840 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1 op, 36250.00 ns, 36.2500 us/op
+WorkloadResult   1: 1 op, 78584.00 ns, 78.5840 us/op
+// GC:  0 0 0 808 1
+
+// AfterAll
+// Benchmark Process 27514 has exited with code 0.
+
+Mean = 78.584 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 78.584 μs, Q1 = 78.584 μs, Median = 78.584 μs, Q3 = 78.584 μs, Max = 78.584 μs
+IQR = 0.000 μs, LowerFence = 78.584 μs, UpperFence = 78.584 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 34 (69.4%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Json.JsonBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Json.JsonBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Json.JsonBenchmarks-report.html
+
+// * Detailed results *
+JsonBenchmarks.DeserializeDto: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.740 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 1.740 ms, Q1 = 1.740 ms, Median = 1.740 ms, Q3 = 1.740 ms, Max = 1.740 ms
+IQR = 0.000 ms, LowerFence = 1.740 ms, UpperFence = 1.740 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.740 ms ; 1.741 ms) | @
+---------------------------------------------------
+
+JsonBenchmarks.DeserializeUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 2.754 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 2.754 ms, Q1 = 2.754 ms, Median = 2.754 ms, Q3 = 2.754 ms, Max = 2.754 ms
+IQR = 0.000 ms, LowerFence = 2.754 ms, UpperFence = 2.754 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.754 ms ; 2.754 ms) | @
+---------------------------------------------------
+
+JsonBenchmarks.DeserializeClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.482 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 1.482 ms, Q1 = 1.482 ms, Median = 1.482 ms, Q3 = 1.482 ms, Max = 1.482 ms
+IQR = 0.000 ms, LowerFence = 1.482 ms, UpperFence = 1.482 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.482 ms ; 1.483 ms) | @
+---------------------------------------------------
+
+JsonBenchmarks.SerializeDto: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 63.209 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 63.209 μs, Q1 = 63.209 μs, Median = 63.209 μs, Q3 = 63.209 μs, Max = 63.209 μs
+IQR = 0.000 μs, LowerFence = 63.209 μs, UpperFence = 63.209 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[63.209 μs ; 63.209 μs) | @
+---------------------------------------------------
+
+JsonBenchmarks.SerializeUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 68.750 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 68.750 μs, Q1 = 68.750 μs, Median = 68.750 μs, Q3 = 68.750 μs, Max = 68.750 μs
+IQR = 0.000 μs, LowerFence = 68.750 μs, UpperFence = 68.750 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[68.749 μs ; 68.751 μs) | @
+---------------------------------------------------
+
+JsonBenchmarks.SerializeClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 78.584 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 78.584 μs, Q1 = 78.584 μs, Median = 78.584 μs, Q3 = 78.584 μs, Max = 78.584 μs
+IQR = 0.000 μs, LowerFence = 78.584 μs, UpperFence = 78.584 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[78.584 μs ; 78.585 μs) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.16.0-preview.2, macOS Tahoe 26.7 (25G229) [Darwin 25.6.0]
+Apple M2 Pro, 1 CPU, 12 logical and 12 physical cores
+Memory: 32 GB Total, 0.77 GB Available
+.NET SDK 11.0.100-rc.1.26425.128
+  [Host] : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+  Dry    : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+
+Job=Dry  IterationCount=1  LaunchCount=1  
+RunStrategy=ColdStart  UnrollFactor=1  
+
+| Method            | Categories  | Mean        | Error | Ratio | Allocated | Alloc Ratio |
+|------------------ |------------ |------------:|------:|------:|----------:|------------:|
+| DeserializeDto    | Deserialize | 1,740.50 μs |    NA |  1.00 |     208 B |        1.00 |
+| DeserializeUnion  | Deserialize | 2,754.42 μs |    NA |  1.58 |    1392 B |        6.69 |
+| DeserializeClosed | Deserialize | 1,482.50 μs |    NA |  0.85 |     544 B |        2.62 |
+|                   |             |             |       |       |           |             |
+| SerializeDto      | Serialize   |    63.21 μs |    NA |  1.00 |     136 B |        1.00 |
+| SerializeUnion    | Serialize   |    68.75 μs |    NA |  1.09 |     760 B |        5.59 |
+| SerializeClosed   | Serialize   |    78.58 μs |    NA |  1.24 |     808 B |        5.94 |
+
+// * Warnings *
+MinIterationTime
+  JsonBenchmarks.DeserializeDto: Dry    -> The minimum observed iteration time is 1.741ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  JsonBenchmarks.DeserializeUnion: Dry  -> The minimum observed iteration time is 2.754ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  JsonBenchmarks.DeserializeClosed: Dry -> The minimum observed iteration time is 1.483ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  JsonBenchmarks.SerializeDto: Dry      -> The minimum observed iteration time is 63.209us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  JsonBenchmarks.SerializeUnion: Dry    -> The minimum observed iteration time is 68.75us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  JsonBenchmarks.SerializeClosed: Dry   -> The minimum observed iteration time is 78.584us which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Legends *
+  Categories  : All categories of the corresponded method, class, and assembly
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  Ratio       : Mean of the ratio distribution ([Current]/[Baseline])
+  Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 μs        : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:02 (2.27 sec), executed benchmarks: 6
+
+// Found 27 benchmarks:
+//   PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+//   PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+//   PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+//   PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+
+// **************************
+// Benchmark: PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59542 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.Exceptions(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 15 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 371875.00 ns, 371.8750 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 47000.00 ns, 47.0000 ns/op
+WorkloadResult   1: 1000 op, 371875.00 ns, 371.8750 ns/op
+// GC:  0 0 0 40000 1000
+
+// AfterAll
+// Benchmark Process 27516 has exited with code 0.
+
+Mean = 371.875 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 371.875 ns, Q1 = 371.875 ns, Median = 371.875 ns, Q3 = 371.875 ns, Max = 371.875 ns
+IQR = 0.000 ns, LowerFence = 371.875 ns, UpperFence = 371.875 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 33 (67.3%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59544 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.TryPattern(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 16 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 357167.00 ns, 357.1670 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 43250.00 ns, 43.2500 ns/op
+WorkloadResult   1: 1000 op, 357167.00 ns, 357.1670 ns/op
+// GC:  0 0 0 40000 1000
+
+// AfterAll
+// Benchmark Process 27517 has exited with code 0.
+
+Mean = 357.167 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 357.167 ns, Q1 = 357.167 ns, Median = 357.167 ns, Q3 = 357.167 ns, Max = 357.167 ns
+IQR = 0.000 ns, LowerFence = 357.167 ns, UpperFence = 357.167 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 32 (65.3%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59546 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.RecordHierarchy(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 17 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 464041.00 ns, 464.0410 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 66333.00 ns, 66.3330 ns/op
+WorkloadResult   1: 1000 op, 464041.00 ns, 464.0410 ns/op
+// GC:  0 0 0 64000 1000
+
+// AfterAll
+// Benchmark Process 27518 has exited with code 0.
+
+Mean = 464.041 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 464.041 ns, Q1 = 464.041 ns, Median = 464.041 ns, Q3 = 464.041 ns, Max = 464.041 ns
+IQR = 0.000 ns, LowerFence = 464.041 ns, UpperFence = 464.041 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 31 (63.3%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59548 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.ResultStruct(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 18 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 515000.00 ns, 515.0000 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 63584.00 ns, 63.5840 ns/op
+WorkloadResult   1: 1000 op, 515000.00 ns, 515.0000 ns/op
+// GC:  0 0 0 40000 1000
+
+// AfterAll
+// Benchmark Process 27519 has exited with code 0.
+
+Mean = 515.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 515.000 ns, Q1 = 515.000 ns, Median = 515.000 ns, Q3 = 515.000 ns, Max = 515.000 ns
+IQR = 0.000 ns, LowerFence = 515.000 ns, UpperFence = 515.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 30 (61.2%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59550 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.ClosedHierarchy(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 19 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 428000.00 ns, 428.0000 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 49708.00 ns, 49.7080 ns/op
+WorkloadResult   1: 1000 op, 428000.00 ns, 428.0000 ns/op
+// GC:  0 0 0 64000 1000
+
+// AfterAll
+// Benchmark Process 27560 has exited with code 0.
+
+Mean = 428.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 428.000 ns, Q1 = 428.000 ns, Median = 428.000 ns, Q3 = 428.000 ns, Max = 428.000 ns
+IQR = 0.000 ns, LowerFence = 428.000 ns, UpperFence = 428.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 29 (59.2%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59552 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionDeclared(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 20 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 542792.00 ns, 542.7920 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 73750.00 ns, 73.7500 ns/op
+WorkloadResult   1: 1000 op, 542792.00 ns, 542.7920 ns/op
+// GC:  0 0 0 64000 1000
+
+// AfterAll
+// Benchmark Process 27561 has exited with code 0.
+
+Mean = 542.792 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 542.792 ns, Q1 = 542.792 ns, Median = 542.792 ns, Q3 = 542.792 ns, Max = 542.792 ns
+IQR = 0.000 ns, LowerFence = 542.792 ns, UpperFence = 542.792 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 28 (57.1%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59554 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionHandWritten(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 21 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 567000.00 ns, 567.0000 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 125625.00 ns, 125.6250 ns/op
+WorkloadResult   1: 1000 op, 567000.00 ns, 567.0000 ns/op
+// GC:  0 0 0 40000 1000
+
+// AfterAll
+// Benchmark Process 27564 has exited with code 0.
+
+Mean = 567.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 567.000 ns, Q1 = 567.000 ns, Median = 567.000 ns, Q3 = 567.000 ns, Max = 567.000 ns
+IQR = 0.000 ns, LowerFence = 567.000 ns, UpperFence = 567.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 27 (55.1%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59557 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionGenerated(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 22 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 532417.00 ns, 532.4170 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 67250.00 ns, 67.2500 ns/op
+WorkloadResult   1: 1000 op, 532417.00 ns, 532.4170 ns/op
+// GC:  0 0 0 40000 1000
+
+// AfterAll
+// Benchmark Process 27587 has exited with code 0.
+
+Mean = 532.417 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 532.417 ns, Q1 = 532.417 ns, Median = 532.417 ns, Q3 = 532.417 ns, Max = 532.417 ns
+IQR = 0.000 ns, LowerFence = 532.417 ns, UpperFence = 532.417 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 26 (53.1%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59560 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionTypedSteps(FailurePercent: 0)" --job Dry --diagnoserRunMode 3 --benchmarkId 23 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1297542.00 ns, 1.2975 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 347125.00 ns, 347.1250 ns/op
+WorkloadResult   1: 1000 op, 1297542.00 ns, 1.2975 us/op
+// GC:  0 0 0 144000 1000
+
+// AfterAll
+// Benchmark Process 27607 has exited with code 0.
+
+Mean = 1.298 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.298 μs, Q1 = 1.298 μs, Median = 1.298 μs, Q3 = 1.298 μs, Max = 1.298 μs
+IQR = 0.000 μs, LowerFence = 1.298 μs, UpperFence = 1.298 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 25 (51.0%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59562 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.Exceptions(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 24 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1098417.00 ns, 1.0984 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 285083.00 ns, 285.0830 ns/op
+WorkloadResult   1: 1000 op, 1098417.00 ns, 1.0984 us/op
+// GC:  0 0 0 84080 1000
+
+// AfterAll
+// Benchmark Process 27645 has exited with code 0.
+
+Mean = 1.098 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.098 μs, Q1 = 1.098 μs, Median = 1.098 μs, Q3 = 1.098 μs, Max = 1.098 μs
+IQR = 0.000 μs, LowerFence = 1.098 μs, UpperFence = 1.098 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 24 (49.0%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59564 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.TryPattern(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 25 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 362833.00 ns, 362.8330 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 43792.00 ns, 43.7920 ns/op
+WorkloadResult   1: 1000 op, 362833.00 ns, 362.8330 ns/op
+// GC:  0 0 0 36000 1000
+
+// AfterAll
+// Benchmark Process 27661 has exited with code 0.
+
+Mean = 362.833 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 362.833 ns, Q1 = 362.833 ns, Median = 362.833 ns, Q3 = 362.833 ns, Max = 362.833 ns
+IQR = 0.000 ns, LowerFence = 362.833 ns, UpperFence = 362.833 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 23 (46.9%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59566 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.RecordHierarchy(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 26 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 440958.00 ns, 440.9580 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 161292.00 ns, 161.2920 ns/op
+WorkloadResult   1: 1000 op, 440958.00 ns, 440.9580 ns/op
+// GC:  0 0 0 60264 1000
+
+// AfterAll
+// Benchmark Process 27662 has exited with code 0.
+
+Mean = 440.958 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 440.958 ns, Q1 = 440.958 ns, Median = 440.958 ns, Q3 = 440.958 ns, Max = 440.958 ns
+IQR = 0.000 ns, LowerFence = 440.958 ns, UpperFence = 440.958 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 22 (44.9%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59568 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.ResultStruct(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 27 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 743084.00 ns, 743.0840 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 103459.00 ns, 103.4590 ns/op
+WorkloadResult   1: 1000 op, 743084.00 ns, 743.0840 ns/op
+// GC:  0 0 0 36000 1000
+
+// AfterAll
+// Benchmark Process 27951 has exited with code 0.
+
+Mean = 743.084 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 743.084 ns, Q1 = 743.084 ns, Median = 743.084 ns, Q3 = 743.084 ns, Max = 743.084 ns
+IQR = 0.000 ns, LowerFence = 743.084 ns, UpperFence = 743.084 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 21 (42.9%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59570 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.ClosedHierarchy(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 28 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 429291.00 ns, 429.2910 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 252791.00 ns, 252.7910 ns/op
+WorkloadResult   1: 1000 op, 429291.00 ns, 429.2910 ns/op
+// GC:  0 0 0 60264 1000
+
+// AfterAll
+// Benchmark Process 27952 has exited with code 0.
+
+Mean = 429.291 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 429.291 ns, Q1 = 429.291 ns, Median = 429.291 ns, Q3 = 429.291 ns, Max = 429.291 ns
+IQR = 0.000 ns, LowerFence = 429.291 ns, UpperFence = 429.291 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 20 (40.8%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59572 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionDeclared(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 29 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 817583.00 ns, 817.5830 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 303125.00 ns, 303.1250 ns/op
+WorkloadResult   1: 1000 op, 817583.00 ns, 817.5830 ns/op
+// GC:  0 0 0 62664 1000
+
+// AfterAll
+// Benchmark Process 27953 has exited with code 0.
+
+Mean = 817.583 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 817.583 ns, Q1 = 817.583 ns, Median = 817.583 ns, Q3 = 817.583 ns, Max = 817.583 ns
+IQR = 0.000 ns, LowerFence = 817.583 ns, UpperFence = 817.583 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 19 (38.8%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59574 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionHandWritten(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 30 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 679625.00 ns, 679.6250 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 87333.00 ns, 87.3330 ns/op
+WorkloadResult   1: 1000 op, 679625.00 ns, 679.6250 ns/op
+// GC:  0 0 0 38664 1000
+
+// AfterAll
+// Benchmark Process 27966 has exited with code 0.
+
+Mean = 679.625 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 679.625 ns, Q1 = 679.625 ns, Median = 679.625 ns, Q3 = 679.625 ns, Max = 679.625 ns
+IQR = 0.000 ns, LowerFence = 679.625 ns, UpperFence = 679.625 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 18 (36.7%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59576 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionGenerated(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 31 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 671250.00 ns, 671.2500 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 80625.00 ns, 80.6250 ns/op
+WorkloadResult   1: 1000 op, 671250.00 ns, 671.2500 ns/op
+// GC:  0 0 0 38664 1000
+
+// AfterAll
+// Benchmark Process 28002 has exited with code 0.
+
+Mean = 671.250 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 671.250 ns, Q1 = 671.250 ns, Median = 671.250 ns, Q3 = 671.250 ns, Max = 671.250 ns
+IQR = 0.000 ns, LowerFence = 671.250 ns, UpperFence = 671.250 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 17 (34.7%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59578 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionTypedSteps(FailurePercent: 10)" --job Dry --diagnoserRunMode 3 --benchmarkId 32 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1465208.00 ns, 1.4652 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 330125.00 ns, 330.1250 ns/op
+WorkloadResult   1: 1000 op, 1465208.00 ns, 1.4652 us/op
+// GC:  0 0 0 139440 1000
+
+// AfterAll
+// Benchmark Process 28005 has exited with code 0.
+
+Mean = 1.465 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.465 μs, Q1 = 1.465 μs, Median = 1.465 μs, Q3 = 1.465 μs, Max = 1.465 μs
+IQR = 0.000 μs, LowerFence = 1.465 μs, UpperFence = 1.465 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 16 (32.7%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59581 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.Exceptions(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 33 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1782125.00 ns, 1.7821 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 1286083.00 ns, 1.2861 us/op
+WorkloadResult   1: 1000 op, 1782125.00 ns, 1.7821 us/op
+// GC:  0 0 0 261136 1000
+
+// AfterAll
+// Benchmark Process 28022 has exited with code 0.
+
+Mean = 1.782 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.782 μs, Q1 = 1.782 μs, Median = 1.782 μs, Q3 = 1.782 μs, Max = 1.782 μs
+IQR = 0.000 μs, LowerFence = 1.782 μs, UpperFence = 1.782 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 15 (30.6%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59583 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.TryPattern(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 34 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 448250.00 ns, 448.2500 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 188208.00 ns, 188.2080 ns/op
+WorkloadResult   1: 1000 op, 448250.00 ns, 448.2500 ns/op
+// GC:  0 0 0 20000 1000
+
+// AfterAll
+// Benchmark Process 28060 has exited with code 0.
+
+Mean = 448.250 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 448.250 ns, Q1 = 448.250 ns, Median = 448.250 ns, Q3 = 448.250 ns, Max = 448.250 ns
+IQR = 0.000 ns, LowerFence = 448.250 ns, UpperFence = 448.250 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 14 (28.6%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59586 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.RecordHierarchy(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 35 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 449542.00 ns, 449.5420 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 263125.00 ns, 263.1250 ns/op
+WorkloadResult   1: 1000 op, 449542.00 ns, 449.5420 ns/op
+// GC:  0 0 0 45328 1000
+
+// AfterAll
+// Benchmark Process 28066 has exited with code 0.
+
+Mean = 449.542 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 449.542 ns, Q1 = 449.542 ns, Median = 449.542 ns, Q3 = 449.542 ns, Max = 449.542 ns
+IQR = 0.000 ns, LowerFence = 449.542 ns, UpperFence = 449.542 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 13 (26.5%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59588 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.ResultStruct(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 36 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 679916.00 ns, 679.9160 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 315875.00 ns, 315.8750 ns/op
+WorkloadResult   1: 1000 op, 679916.00 ns, 679.9160 ns/op
+// GC:  0 0 0 20000 1000
+
+// AfterAll
+// Benchmark Process 28075 has exited with code 0.
+
+Mean = 679.916 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 679.916 ns, Q1 = 679.916 ns, Median = 679.916 ns, Q3 = 679.916 ns, Max = 679.916 ns
+IQR = 0.000 ns, LowerFence = 679.916 ns, UpperFence = 679.916 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 12 (24.5%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59591 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.ClosedHierarchy(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 37 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 554375.00 ns, 554.3750 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 350875.00 ns, 350.8750 ns/op
+WorkloadResult   1: 1000 op, 554375.00 ns, 554.3750 ns/op
+// GC:  0 0 0 45328 1000
+
+// AfterAll
+// Benchmark Process 28079 has exited with code 0.
+
+Mean = 554.375 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 554.375 ns, Q1 = 554.375 ns, Median = 554.375 ns, Q3 = 554.375 ns, Max = 554.375 ns
+IQR = 0.000 ns, LowerFence = 554.375 ns, UpperFence = 554.375 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 11 (22.4%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59596 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionDeclared(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 38 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 864416.00 ns, 864.4160 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 210584.00 ns, 210.5840 ns/op
+WorkloadResult   1: 1000 op, 864416.00 ns, 864.4160 ns/op
+// GC:  0 0 0 57328 1000
+
+// AfterAll
+// Benchmark Process 28086 has exited with code 0.
+
+Mean = 864.416 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 864.416 ns, Q1 = 864.416 ns, Median = 864.416 ns, Q3 = 864.416 ns, Max = 864.416 ns
+IQR = 0.000 ns, LowerFence = 864.416 ns, UpperFence = 864.416 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 10 (20.4%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59602 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionHandWritten(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 39 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 968292.00 ns, 968.2920 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 142333.00 ns, 142.3330 ns/op
+WorkloadResult   1: 1000 op, 968292.00 ns, 968.2920 ns/op
+// GC:  0 0 0 33328 1000
+
+// AfterAll
+// Benchmark Process 28093 has exited with code 0.
+
+Mean = 968.292 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 968.292 ns, Q1 = 968.292 ns, Median = 968.292 ns, Q3 = 968.292 ns, Max = 968.292 ns
+IQR = 0.000 ns, LowerFence = 968.292 ns, UpperFence = 968.292 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 9 (18.4%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59606 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionGenerated(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 40 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 756333.00 ns, 756.3330 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 173667.00 ns, 173.6670 ns/op
+WorkloadResult   1: 1000 op, 756333.00 ns, 756.3330 ns/op
+// GC:  0 0 0 33328 1000
+
+// AfterAll
+// Benchmark Process 28113 has exited with code 0.
+
+Mean = 756.333 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 756.333 ns, Q1 = 756.333 ns, Median = 756.333 ns, Q3 = 756.333 ns, Max = 756.333 ns
+IQR = 0.000 ns, LowerFence = 756.333 ns, UpperFence = 756.333 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 8 (16.3%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59608 --benchmarkName "Benchmarks.Pipeline.PipelineBenchmarks.UnionTypedSteps(FailurePercent: 50)" --job Dry --diagnoserRunMode 3 --benchmarkId 41 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 1684667.00 ns, 1.6847 us/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 825542.00 ns, 825.5420 ns/op
+WorkloadResult   1: 1000 op, 1684667.00 ns, 1.6847 us/op
+// GC:  0 0 0 121304 1000
+
+// AfterAll
+// Benchmark Process 28156 has exited with code 0.
+
+Mean = 1.685 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.685 μs, Q1 = 1.685 μs, Median = 1.685 μs, Q3 = 1.685 μs, Max = 1.685 μs
+IQR = 0.000 μs, LowerFence = 1.685 μs, UpperFence = 1.685 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 7 (14.3%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Pipeline.PipelineBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Pipeline.PipelineBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Pipeline.PipelineBenchmarks-report.html
+
+// * Detailed results *
+PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 371.875 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 371.875 ns, Q1 = 371.875 ns, Median = 371.875 ns, Q3 = 371.875 ns, Max = 371.875 ns
+IQR = 0.000 ns, LowerFence = 371.875 ns, UpperFence = 371.875 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[371.375 ns ; 372.375 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 357.167 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 357.167 ns, Q1 = 357.167 ns, Median = 357.167 ns, Q3 = 357.167 ns, Max = 357.167 ns
+IQR = 0.000 ns, LowerFence = 357.167 ns, UpperFence = 357.167 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[356.667 ns ; 357.667 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 464.041 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 464.041 ns, Q1 = 464.041 ns, Median = 464.041 ns, Q3 = 464.041 ns, Max = 464.041 ns
+IQR = 0.000 ns, LowerFence = 464.041 ns, UpperFence = 464.041 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[463.541 ns ; 464.541 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 515.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 515.000 ns, Q1 = 515.000 ns, Median = 515.000 ns, Q3 = 515.000 ns, Max = 515.000 ns
+IQR = 0.000 ns, LowerFence = 515.000 ns, UpperFence = 515.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[514.500 ns ; 515.500 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 428.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 428.000 ns, Q1 = 428.000 ns, Median = 428.000 ns, Q3 = 428.000 ns, Max = 428.000 ns
+IQR = 0.000 ns, LowerFence = 428.000 ns, UpperFence = 428.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[427.500 ns ; 428.500 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 542.792 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 542.792 ns, Q1 = 542.792 ns, Median = 542.792 ns, Q3 = 542.792 ns, Max = 542.792 ns
+IQR = 0.000 ns, LowerFence = 542.792 ns, UpperFence = 542.792 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[542.292 ns ; 543.292 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 567.000 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 567.000 ns, Q1 = 567.000 ns, Median = 567.000 ns, Q3 = 567.000 ns, Max = 567.000 ns
+IQR = 0.000 ns, LowerFence = 567.000 ns, UpperFence = 567.000 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[566.500 ns ; 567.500 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 532.417 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 532.417 ns, Q1 = 532.417 ns, Median = 532.417 ns, Q3 = 532.417 ns, Max = 532.417 ns
+IQR = 0.000 ns, LowerFence = 532.417 ns, UpperFence = 532.417 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[531.917 ns ; 532.917 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=0]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.298 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.298 μs, Q1 = 1.298 μs, Median = 1.298 μs, Q3 = 1.298 μs, Max = 1.298 μs
+IQR = 0.000 μs, LowerFence = 1.298 μs, UpperFence = 1.298 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.297 μs ; 1.298 μs) | @
+---------------------------------------------------
+
+PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.098 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.098 μs, Q1 = 1.098 μs, Median = 1.098 μs, Q3 = 1.098 μs, Max = 1.098 μs
+IQR = 0.000 μs, LowerFence = 1.098 μs, UpperFence = 1.098 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.098 μs ; 1.099 μs) | @
+---------------------------------------------------
+
+PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 362.833 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 362.833 ns, Q1 = 362.833 ns, Median = 362.833 ns, Q3 = 362.833 ns, Max = 362.833 ns
+IQR = 0.000 ns, LowerFence = 362.833 ns, UpperFence = 362.833 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[362.333 ns ; 363.333 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 440.958 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 440.958 ns, Q1 = 440.958 ns, Median = 440.958 ns, Q3 = 440.958 ns, Max = 440.958 ns
+IQR = 0.000 ns, LowerFence = 440.958 ns, UpperFence = 440.958 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[440.458 ns ; 441.458 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 743.084 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 743.084 ns, Q1 = 743.084 ns, Median = 743.084 ns, Q3 = 743.084 ns, Max = 743.084 ns
+IQR = 0.000 ns, LowerFence = 743.084 ns, UpperFence = 743.084 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[742.584 ns ; 743.584 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 429.291 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 429.291 ns, Q1 = 429.291 ns, Median = 429.291 ns, Q3 = 429.291 ns, Max = 429.291 ns
+IQR = 0.000 ns, LowerFence = 429.291 ns, UpperFence = 429.291 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[428.791 ns ; 429.791 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 817.583 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 817.583 ns, Q1 = 817.583 ns, Median = 817.583 ns, Q3 = 817.583 ns, Max = 817.583 ns
+IQR = 0.000 ns, LowerFence = 817.583 ns, UpperFence = 817.583 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[817.083 ns ; 818.083 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 679.625 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 679.625 ns, Q1 = 679.625 ns, Median = 679.625 ns, Q3 = 679.625 ns, Max = 679.625 ns
+IQR = 0.000 ns, LowerFence = 679.625 ns, UpperFence = 679.625 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[679.125 ns ; 680.125 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 671.250 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 671.250 ns, Q1 = 671.250 ns, Median = 671.250 ns, Q3 = 671.250 ns, Max = 671.250 ns
+IQR = 0.000 ns, LowerFence = 671.250 ns, UpperFence = 671.250 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[670.750 ns ; 671.750 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=10]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.465 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.465 μs, Q1 = 1.465 μs, Median = 1.465 μs, Q3 = 1.465 μs, Max = 1.465 μs
+IQR = 0.000 μs, LowerFence = 1.465 μs, UpperFence = 1.465 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.465 μs ; 1.466 μs) | @
+---------------------------------------------------
+
+PipelineBenchmarks.Exceptions: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.782 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.782 μs, Q1 = 1.782 μs, Median = 1.782 μs, Q3 = 1.782 μs, Max = 1.782 μs
+IQR = 0.000 μs, LowerFence = 1.782 μs, UpperFence = 1.782 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.782 μs ; 1.783 μs) | @
+---------------------------------------------------
+
+PipelineBenchmarks.TryPattern: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 448.250 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 448.250 ns, Q1 = 448.250 ns, Median = 448.250 ns, Q3 = 448.250 ns, Max = 448.250 ns
+IQR = 0.000 ns, LowerFence = 448.250 ns, UpperFence = 448.250 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[447.750 ns ; 448.750 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.RecordHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 449.542 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 449.542 ns, Q1 = 449.542 ns, Median = 449.542 ns, Q3 = 449.542 ns, Max = 449.542 ns
+IQR = 0.000 ns, LowerFence = 449.542 ns, UpperFence = 449.542 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[449.042 ns ; 450.042 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.ResultStruct: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 679.916 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 679.916 ns, Q1 = 679.916 ns, Median = 679.916 ns, Q3 = 679.916 ns, Max = 679.916 ns
+IQR = 0.000 ns, LowerFence = 679.916 ns, UpperFence = 679.916 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[679.416 ns ; 680.416 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.ClosedHierarchy: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 554.375 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 554.375 ns, Q1 = 554.375 ns, Median = 554.375 ns, Q3 = 554.375 ns, Max = 554.375 ns
+IQR = 0.000 ns, LowerFence = 554.375 ns, UpperFence = 554.375 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[553.875 ns ; 554.875 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionDeclared: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 864.416 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 864.416 ns, Q1 = 864.416 ns, Median = 864.416 ns, Q3 = 864.416 ns, Max = 864.416 ns
+IQR = 0.000 ns, LowerFence = 864.416 ns, UpperFence = 864.416 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[863.916 ns ; 864.916 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionHandWritten: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 968.292 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 968.292 ns, Q1 = 968.292 ns, Median = 968.292 ns, Q3 = 968.292 ns, Max = 968.292 ns
+IQR = 0.000 ns, LowerFence = 968.292 ns, UpperFence = 968.292 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[967.792 ns ; 968.792 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionGenerated: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 756.333 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 756.333 ns, Q1 = 756.333 ns, Median = 756.333 ns, Q3 = 756.333 ns, Max = 756.333 ns
+IQR = 0.000 ns, LowerFence = 756.333 ns, UpperFence = 756.333 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[755.833 ns ; 756.833 ns) | @
+---------------------------------------------------
+
+PipelineBenchmarks.UnionTypedSteps: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1) [FailurePercent=50]
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 1.685 μs, StdErr = 0.000 μs (0.00%), N = 1, StdDev = 0.000 μs
+Min = 1.685 μs, Q1 = 1.685 μs, Median = 1.685 μs, Q3 = 1.685 μs, Max = 1.685 μs
+IQR = 0.000 μs, LowerFence = 1.685 μs, UpperFence = 1.685 μs
+ConfidenceInterval = [NaN μs; NaN μs] (CI 99.9%), Margin = NaN μs (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.684 μs ; 1.685 μs) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.16.0-preview.2, macOS Tahoe 26.7 (25G229) [Darwin 25.6.0]
+Apple M2 Pro, 1 CPU, 12 logical and 12 physical cores
+Memory: 32 GB Total, 0.77 GB Available
+.NET SDK 11.0.100-rc.1.26425.128
+  [Host] : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+  Dry    : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+
+Job=Dry  IterationCount=1  LaunchCount=1  
+RunStrategy=ColdStart  UnrollFactor=1  
+
+| Method           | FailurePercent | Mean       | Error | Ratio | Allocated | Alloc Ratio |
+|----------------- |--------------- |-----------:|------:|------:|----------:|------------:|
+| Exceptions       | 0              |   371.9 ns |    NA |  1.04 |      40 B |        1.00 |
+| TryPattern       | 0              |   357.2 ns |    NA |  1.00 |      40 B |        1.00 |
+| RecordHierarchy  | 0              |   464.0 ns |    NA |  1.30 |      64 B |        1.60 |
+| ResultStruct     | 0              |   515.0 ns |    NA |  1.44 |      40 B |        1.00 |
+| ClosedHierarchy  | 0              |   428.0 ns |    NA |  1.20 |      64 B |        1.60 |
+| UnionDeclared    | 0              |   542.8 ns |    NA |  1.52 |      64 B |        1.60 |
+| UnionHandWritten | 0              |   567.0 ns |    NA |  1.59 |      40 B |        1.00 |
+| UnionGenerated   | 0              |   532.4 ns |    NA |  1.49 |      40 B |        1.00 |
+| UnionTypedSteps  | 0              | 1,297.5 ns |    NA |  3.63 |     144 B |        3.60 |
+|                  |                |            |       |       |           |             |
+| Exceptions       | 10             | 1,098.4 ns |    NA |  3.03 |      84 B |        2.33 |
+| TryPattern       | 10             |   362.8 ns |    NA |  1.00 |      36 B |        1.00 |
+| RecordHierarchy  | 10             |   441.0 ns |    NA |  1.22 |      60 B |        1.67 |
+| ResultStruct     | 10             |   743.1 ns |    NA |  2.05 |      36 B |        1.00 |
+| ClosedHierarchy  | 10             |   429.3 ns |    NA |  1.18 |      60 B |        1.67 |
+| UnionDeclared    | 10             |   817.6 ns |    NA |  2.25 |      63 B |        1.75 |
+| UnionHandWritten | 10             |   679.6 ns |    NA |  1.87 |      39 B |        1.08 |
+| UnionGenerated   | 10             |   671.2 ns |    NA |  1.85 |      39 B |        1.08 |
+| UnionTypedSteps  | 10             | 1,465.2 ns |    NA |  4.04 |     139 B |        3.86 |
+|                  |                |            |       |       |           |             |
+| Exceptions       | 50             | 1,782.1 ns |    NA |  3.98 |     261 B |       13.05 |
+| TryPattern       | 50             |   448.2 ns |    NA |  1.00 |      20 B |        1.00 |
+| RecordHierarchy  | 50             |   449.5 ns |    NA |  1.00 |      45 B |        2.25 |
+| ResultStruct     | 50             |   679.9 ns |    NA |  1.52 |      20 B |        1.00 |
+| ClosedHierarchy  | 50             |   554.4 ns |    NA |  1.24 |      45 B |        2.25 |
+| UnionDeclared    | 50             |   864.4 ns |    NA |  1.93 |      57 B |        2.85 |
+| UnionHandWritten | 50             |   968.3 ns |    NA |  2.16 |      33 B |        1.65 |
+| UnionGenerated   | 50             |   756.3 ns |    NA |  1.69 |      33 B |        1.65 |
+| UnionTypedSteps  | 50             | 1,684.7 ns |    NA |  3.76 |     121 B |        6.05 |
+
+// * Warnings *
+MinIterationTime
+  PipelineBenchmarks.Exceptions: Dry       -> The minimum observed iteration time is 371.875us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.TryPattern: Dry       -> The minimum observed iteration time is 357.167us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.RecordHierarchy: Dry  -> The minimum observed iteration time is 464.041us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.ResultStruct: Dry     -> The minimum observed iteration time is 515us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.ClosedHierarchy: Dry  -> The minimum observed iteration time is 428us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionDeclared: Dry    -> The minimum observed iteration time is 542.792us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionHandWritten: Dry -> The minimum observed iteration time is 567us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionGenerated: Dry   -> The minimum observed iteration time is 532.417us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionTypedSteps: Dry  -> The minimum observed iteration time is 1.298ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.Exceptions: Dry       -> The minimum observed iteration time is 1.098ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.TryPattern: Dry       -> The minimum observed iteration time is 362.833us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.RecordHierarchy: Dry  -> The minimum observed iteration time is 440.958us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.ResultStruct: Dry     -> The minimum observed iteration time is 743.084us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.ClosedHierarchy: Dry  -> The minimum observed iteration time is 429.291us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionDeclared: Dry    -> The minimum observed iteration time is 817.583us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionHandWritten: Dry -> The minimum observed iteration time is 679.625us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionGenerated: Dry   -> The minimum observed iteration time is 671.25us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionTypedSteps: Dry  -> The minimum observed iteration time is 1.465ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.Exceptions: Dry       -> The minimum observed iteration time is 1.782ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.TryPattern: Dry       -> The minimum observed iteration time is 448.25us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.RecordHierarchy: Dry  -> The minimum observed iteration time is 449.542us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.ResultStruct: Dry     -> The minimum observed iteration time is 679.916us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.ClosedHierarchy: Dry  -> The minimum observed iteration time is 554.375us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionDeclared: Dry    -> The minimum observed iteration time is 864.416us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionHandWritten: Dry -> The minimum observed iteration time is 968.292us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionGenerated: Dry   -> The minimum observed iteration time is 756.333us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PipelineBenchmarks.UnionTypedSteps: Dry  -> The minimum observed iteration time is 1.685ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Legends *
+  FailurePercent : Value of the 'FailurePercent' parameter
+  Mean           : Arithmetic mean of all measurements
+  Error          : Half of 99.9% confidence interval
+  Ratio          : Mean of the ratio distribution ([Current]/[Baseline])
+  Allocated      : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio    : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 ns           : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:10 (10.23 sec), executed benchmarks: 27
+
+// Found 4 benchmarks:
+//   ReferenceCaseBenchmarks.CreateAsObject: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   ReferenceCaseBenchmarks.CreateAsUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   ReferenceCaseBenchmarks.CreateAsClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   ReferenceCaseBenchmarks.WrapAsUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// **************************
+// Benchmark: ReferenceCaseBenchmarks.CreateAsObject: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59611 --benchmarkName Benchmarks.Unions.ReferenceCaseBenchmarks.CreateAsObject --job Dry --diagnoserRunMode 3 --benchmarkId 42 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 165500.00 ns, 165.5000 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 33750.00 ns, 33.7500 ns/op
+WorkloadResult   1: 1000 op, 165500.00 ns, 165.5000 ns/op
+// GC:  0 0 0 24000 1000
+
+// AfterAll
+// Benchmark Process 28213 has exited with code 0.
+
+Mean = 165.500 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 165.500 ns, Q1 = 165.500 ns, Median = 165.500 ns, Q3 = 165.500 ns, Max = 165.500 ns
+IQR = 0.000 ns, LowerFence = 165.500 ns, UpperFence = 165.500 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 6 (12.2%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: ReferenceCaseBenchmarks.CreateAsUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59613 --benchmarkName Benchmarks.Unions.ReferenceCaseBenchmarks.CreateAsUnion --job Dry --diagnoserRunMode 3 --benchmarkId 43 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 219792.00 ns, 219.7920 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 163917.00 ns, 163.9170 ns/op
+WorkloadResult   1: 1000 op, 219792.00 ns, 219.7920 ns/op
+// GC:  0 0 0 24000 1000
+
+// AfterAll
+// Benchmark Process 28223 has exited with code 0.
+
+Mean = 219.792 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 219.792 ns, Q1 = 219.792 ns, Median = 219.792 ns, Q3 = 219.792 ns, Max = 219.792 ns
+IQR = 0.000 ns, LowerFence = 219.792 ns, UpperFence = 219.792 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 5 (10.2%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: ReferenceCaseBenchmarks.CreateAsClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59615 --benchmarkName Benchmarks.Unions.ReferenceCaseBenchmarks.CreateAsClosed --job Dry --diagnoserRunMode 3 --benchmarkId 44 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 171500.00 ns, 171.5000 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 93291.00 ns, 93.2910 ns/op
+WorkloadResult   1: 1000 op, 171500.00 ns, 171.5000 ns/op
+// GC:  0 0 0 24000 1000
+
+// AfterAll
+// Benchmark Process 28224 has exited with code 0.
+
+Mean = 171.500 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 171.500 ns, Q1 = 171.500 ns, Median = 171.500 ns, Q3 = 171.500 ns, Max = 171.500 ns
+IQR = 0.000 ns, LowerFence = 171.500 ns, UpperFence = 171.500 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 4 (8.2%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: ReferenceCaseBenchmarks.WrapAsUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59617 --benchmarkName Benchmarks.Unions.ReferenceCaseBenchmarks.WrapAsUnion --job Dry --diagnoserRunMode 3 --benchmarkId 45 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 232375.00 ns, 232.3750 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 44416.00 ns, 44.4160 ns/op
+WorkloadResult   1: 1000 op, 232375.00 ns, 232.3750 ns/op
+// GC:  0 0 0 0 1000
+
+// AfterAll
+// Benchmark Process 28236 has exited with code 0.
+
+Mean = 232.375 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 232.375 ns, Q1 = 232.375 ns, Median = 232.375 ns, Q3 = 232.375 ns, Max = 232.375 ns
+IQR = 0.000 ns, LowerFence = 232.375 ns, UpperFence = 232.375 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 3 (6.1%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Unions.ReferenceCaseBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Unions.ReferenceCaseBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Unions.ReferenceCaseBenchmarks-report.html
+
+// * Detailed results *
+ReferenceCaseBenchmarks.CreateAsObject: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 165.500 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 165.500 ns, Q1 = 165.500 ns, Median = 165.500 ns, Q3 = 165.500 ns, Max = 165.500 ns
+IQR = 0.000 ns, LowerFence = 165.500 ns, UpperFence = 165.500 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[165.000 ns ; 166.000 ns) | @
+---------------------------------------------------
+
+ReferenceCaseBenchmarks.CreateAsUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 219.792 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 219.792 ns, Q1 = 219.792 ns, Median = 219.792 ns, Q3 = 219.792 ns, Max = 219.792 ns
+IQR = 0.000 ns, LowerFence = 219.792 ns, UpperFence = 219.792 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[219.292 ns ; 220.292 ns) | @
+---------------------------------------------------
+
+ReferenceCaseBenchmarks.CreateAsClosed: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 171.500 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 171.500 ns, Q1 = 171.500 ns, Median = 171.500 ns, Q3 = 171.500 ns, Max = 171.500 ns
+IQR = 0.000 ns, LowerFence = 171.500 ns, UpperFence = 171.500 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[171.000 ns ; 172.000 ns) | @
+---------------------------------------------------
+
+ReferenceCaseBenchmarks.WrapAsUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 232.375 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 232.375 ns, Q1 = 232.375 ns, Median = 232.375 ns, Q3 = 232.375 ns, Max = 232.375 ns
+IQR = 0.000 ns, LowerFence = 232.375 ns, UpperFence = 232.375 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[231.875 ns ; 232.875 ns) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.16.0-preview.2, macOS Tahoe 26.7 (25G229) [Darwin 25.6.0]
+Apple M2 Pro, 1 CPU, 12 logical and 12 physical cores
+Memory: 32 GB Total, 0.77 GB Available
+.NET SDK 11.0.100-rc.1.26425.128
+  [Host] : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+  Dry    : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+
+Job=Dry  IterationCount=1  LaunchCount=1  
+RunStrategy=ColdStart  UnrollFactor=1  
+
+| Method         | Mean     | Error | Ratio | Allocated | Alloc Ratio |
+|--------------- |---------:|------:|------:|----------:|------------:|
+| CreateAsObject | 165.5 ns |    NA |  1.00 |      24 B |        1.00 |
+| CreateAsUnion  | 219.8 ns |    NA |  1.33 |      24 B |        1.00 |
+| CreateAsClosed | 171.5 ns |    NA |  1.04 |      24 B |        1.00 |
+| WrapAsUnion    | 232.4 ns |    NA |  1.40 |         - |        0.00 |
+
+// * Warnings *
+MinIterationTime
+  ReferenceCaseBenchmarks.CreateAsObject: Dry -> The minimum observed iteration time is 165.5us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  ReferenceCaseBenchmarks.CreateAsUnion: Dry  -> The minimum observed iteration time is 219.792us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  ReferenceCaseBenchmarks.CreateAsClosed: Dry -> The minimum observed iteration time is 171.5us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  ReferenceCaseBenchmarks.WrapAsUnion: Dry    -> The minimum observed iteration time is 232.375us which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Legends *
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  Ratio       : Mean of the ratio distribution ([Current]/[Baseline])
+  Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 ns        : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:01 (1.55 sec), executed benchmarks: 4
+
+// Found 3 benchmarks:
+//   ValueCaseBenchmarks.UnionDeclaration: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   ValueCaseBenchmarks.HandWrittenUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+//   ValueCaseBenchmarks.GeneratedUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// **************************
+// Benchmark: ValueCaseBenchmarks.UnionDeclaration: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59619 --benchmarkName Benchmarks.Unions.ValueCaseBenchmarks.UnionDeclaration --job Dry --diagnoserRunMode 3 --benchmarkId 46 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 396833.00 ns, 396.8330 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 99125.00 ns, 99.1250 ns/op
+WorkloadResult   1: 1000 op, 396833.00 ns, 396.8330 ns/op
+// GC:  0 0 0 24000 1000
+
+// AfterAll
+// Benchmark Process 28237 has exited with code 0.
+
+Mean = 396.833 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 396.833 ns, Q1 = 396.833 ns, Median = 396.833 ns, Q3 = 396.833 ns, Max = 396.833 ns
+IQR = 0.000 ns, LowerFence = 396.833 ns, UpperFence = 396.833 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 2 (4.1%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: ValueCaseBenchmarks.HandWrittenUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59621 --benchmarkName Benchmarks.Unions.ValueCaseBenchmarks.HandWrittenUnion --job Dry --diagnoserRunMode 3 --benchmarkId 47 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 370250.00 ns, 370.2500 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 159000.00 ns, 159.0000 ns/op
+WorkloadResult   1: 1000 op, 370250.00 ns, 370.2500 ns/op
+// GC:  0 0 0 0 1000
+
+// AfterAll
+// Benchmark Process 28238 has exited with code 0.
+
+Mean = 370.250 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 370.250 ns, Q1 = 370.250 ns, Median = 370.250 ns, Q3 = 370.250 ns, Max = 370.250 ns
+IQR = 0.000 ns, LowerFence = 370.250 ns, UpperFence = 370.250 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 1 (2.0%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// **************************
+// Benchmark: ValueCaseBenchmarks.GeneratedUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet Benchmarks-gen.dll --ipcPort 59623 --benchmarkName Benchmarks.Unions.ValueCaseBenchmarks.GeneratedUnion --job Dry --diagnoserRunMode 3 --benchmarkId 48 in /Users/magnuskallman/Projects/sourceman/blog-examples/csharp-state-of-the-union-2026/bench/Benchmarks/.bdn/1/b
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.16.0-preview.2
+// Runtime=.NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+// GC=Concurrent Workstation
+// HardwareIntrinsics=ArmBase+AdvSimd,AES,CRC32,DP,RDM,SHA1,SHA256 VectorSize=128
+// Job: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+
+// BeforeActualRun
+WorkloadActual   1: 1000 op, 341500.00 ns, 341.5000 ns/op
+
+// AfterActualRun
+// BeforeExtraIteration
+// AfterExtraIteration
+WorkloadExtra    1: 1000 op, 96792.00 ns, 96.7920 ns/op
+WorkloadResult   1: 1000 op, 341500.00 ns, 341.5000 ns/op
+// GC:  0 0 0 0 1000
+
+// AfterAll
+// Benchmark Process 28240 has exited with code 0.
+
+Mean = 341.500 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 341.500 ns, Q1 = 341.500 ns, Median = 341.500 ns, Q3 = 341.500 ns, Max = 341.500 ns
+IQR = 0.000 ns, LowerFence = 341.500 ns, UpperFence = 341.500 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2026-10-05 12:43 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Unions.ValueCaseBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Unions.ValueCaseBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/Benchmarks.Unions.ValueCaseBenchmarks-report.html
+
+// * Detailed results *
+ValueCaseBenchmarks.UnionDeclaration: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 396.833 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 396.833 ns, Q1 = 396.833 ns, Median = 396.833 ns, Q3 = 396.833 ns, Max = 396.833 ns
+IQR = 0.000 ns, LowerFence = 396.833 ns, UpperFence = 396.833 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[396.333 ns ; 397.333 ns) | @
+---------------------------------------------------
+
+ValueCaseBenchmarks.HandWrittenUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 370.250 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 370.250 ns, Q1 = 370.250 ns, Median = 370.250 ns, Q3 = 370.250 ns, Max = 370.250 ns
+IQR = 0.000 ns, LowerFence = 370.250 ns, UpperFence = 370.250 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[369.750 ns ; 370.750 ns) | @
+---------------------------------------------------
+
+ValueCaseBenchmarks.GeneratedUnion: Dry(IterationCount=1, LaunchCount=1, RunStrategy=ColdStart, UnrollFactor=1)
+Runtime = .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a; GC = Concurrent Workstation
+Mean = 341.500 ns, StdErr = 0.000 ns (0.00%), N = 1, StdDev = 0.000 ns
+Min = 341.500 ns, Q1 = 341.500 ns, Median = 341.500 ns, Q3 = 341.500 ns, Max = 341.500 ns
+IQR = 0.000 ns, LowerFence = 341.500 ns, UpperFence = 341.500 ns
+ConfidenceInterval = [NaN ns; NaN ns] (CI 99.9%), Margin = NaN ns (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[341.000 ns ; 342.000 ns) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.16.0-preview.2, macOS Tahoe 26.7 (25G229) [Darwin 25.6.0]
+Apple M2 Pro, 1 CPU, 12 logical and 12 physical cores
+Memory: 32 GB Total, 0.77 GB Available
+.NET SDK 11.0.100-rc.1.26425.128
+  [Host] : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+  Dry    : .NET 11.0.0 (11.0.0-rc.1.26425.128, 11.0.26.42628), Arm64 RyuJIT armv8.0-a
+
+Job=Dry  IterationCount=1  LaunchCount=1  
+RunStrategy=ColdStart  UnrollFactor=1  
+
+| Method           | Mean     | Error | Ratio | Allocated | Alloc Ratio |
+|----------------- |---------:|------:|------:|----------:|------------:|
+| UnionDeclaration | 396.8 ns |    NA |  1.00 |      24 B |        1.00 |
+| HandWrittenUnion | 370.2 ns |    NA |  0.93 |         - |        0.00 |
+| GeneratedUnion   | 341.5 ns |    NA |  0.86 |         - |        0.00 |
+
+// * Warnings *
+MinIterationTime
+  ValueCaseBenchmarks.UnionDeclaration: Dry -> The minimum observed iteration time is 396.833us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  ValueCaseBenchmarks.HandWrittenUnion: Dry -> The minimum observed iteration time is 370.25us which is very small. It's recommended to increase it to at least 100ms using more operations.
+  ValueCaseBenchmarks.GeneratedUnion: Dry   -> The minimum observed iteration time is 341.5us which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Legends *
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  Ratio       : Mean of the ratio distribution ([Current]/[Baseline])
+  Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 ns        : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:01 (1.12 sec), executed benchmarks: 3
+
+Global total time: 00:00:27 (27.37 sec), executed benchmarks: 49
+// * Artifacts cleanup *
+Artifacts cleanup is finished
