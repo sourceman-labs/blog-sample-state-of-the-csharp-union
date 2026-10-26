@@ -24,4 +24,4 @@ dotnet run --project src/Client
 dotnet run -c Release --project bench/Benchmarks -- --filter '*'
 ```
 
-The full benchmark run takes about 20 minutes. Close other apps first, because the results depend on free memory. Earlier reports are in `BenchmarkDotNet.Artifacts/results/`.
+Close other apps first, because the results depend on free memory. Earlier reports are in `BenchmarkDotNet.Artifacts/results/`.
