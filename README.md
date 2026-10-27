@@ -24,4 +24,5 @@ dotnet run --project src/Client
 dotnet run -c Release --project bench/Benchmarks -- --filter '*'
 ```
 
-Close other apps first, because the results depend on free memory. Earlier reports are in `BenchmarkDotNet.Artifacts/results/`.
+
+_This sample repo was obviously was generated with AI_
